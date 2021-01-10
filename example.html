@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculator-Example</title>
+  </head>
+  <body>
+    <input type = "text" id="num1" placeholder = "请输入数字1" oninput="tryCalculate()"/>
+    <select id="operation" onchange="tryCalculate()">
+      <option selected>---请选择操作符---</option>
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <input type = "text" id = "num2" placeholder = "请输入数字2" oninput="tryCalculate()"/>
+     =
+     <input type = "text" id = "result" disabled />
+     
+     <script text = "text/javascript">
+       let number1 = document.getElementById("num1");
+       let number2 = document.getElementById("num2");
+       let operation = document.getElementById("operation");
+       let result = document.getElementById("result");
+       
+       function tryCalculate() {
+         const n1 = Number(number1.value);
+         const n2 = Number(number2.value);
+         const op = operation.value;
+         console.log(`number1: ${n1}, number2: ${n2}, operation: ${op}`)
+         if (isEmptyValue(n1) || isEmptyValue(n2) || isEmptyValue(op)) return;
+         switch(op) {
+           case '+':
+             result.value = n1 + n2;
+             break;
+            case '-':
+             result.value = n1 - n2;
+             break;
+            case '*':
+            result.value = n1 * n2;
+            break;
+            case '/':
+            result.value = n1 / n2;
+            break;
+         }
+       }
+       const isEmptyValue = (value) => {
+         return typeof(value) === undefined || value === '';
+       } 
+    </script>
+  </body>
+</html>
