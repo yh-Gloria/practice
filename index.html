@@ -19,9 +19,14 @@
 				margin-top: 2%;
 			}
 		</style>
+		
 	</head>
 	<body>
 		<input id="display" value="请输入" />
-		<button type="button" value="1" id="button_1" onclick="document.getElementById(display).setAttribute('value','1')">1</button>
+		<button type="text" value= '1' id="number"  onclick= "keys_operation(this)">1</button>
+		<button type="button" value="2" id="number" onclick= "keys_operation(this)">2</button>
+		<button id="operator" value="+" id="number" onclick= "keys_operation(this)">+</button>
+		
+		 <script src="js/display.js"></script>
 	</body>
 </html>
