@@ -13,20 +13,21 @@
 				font-family: "sans serif";
 			}
 			#display{
-				background-color: aliceblue;
-				margin-left: 20%;
-				margin-right: 20%;
+				margin-left: 25%;
+				margin-right: 25%;
 				margin-top: 2%;
 			}
 		</style>
 		
 	</head>
 	<body>
-		<input id="display" value="请输入" />
-		<button type="text" value= '1' id="number"  onclick= "keys_operation(this)">1</button>
-		<button type="button" value="2" id="number" onclick= "keys_operation(this)">2</button>
-		<button id="operator" value="+" id="number" onclick= "keys_operation(this)">+</button>
-		
-		 <script src="js/display.js"></script>
+		<div id="display">
+			<input type="text" id="expression" value="请输入表达式" />
+			=
+			<input type="text" id="result" value="" />
+		</div>
+		<script type="text/javascript">
+			
+		</script>
 	</body>
 </html>
